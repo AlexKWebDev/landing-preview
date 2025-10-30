@@ -87,10 +87,24 @@
         gap: 20px;
       }
 
+      .responsive-grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .responsive-grid-container div {
+        width: 100%;
+      }
+
       @media (max-width: 800px) {
         .responsive-grid {
           grid-template-columns: initial !important;
           grid-template-rows: repeat(3, 1fr);
+        }
+
+        .responsive-grid-container {
+          grid-template-columns: initial !important;
+          grid-template-rows: repeat(2, 1fr);
         }
       }
     </style>
@@ -312,9 +326,10 @@
       >
         <div class="image-gradient top-gradient"></div>
         <img
-          src="./assets/2.jpeg"
+          src="./assets/2.png"
           alt="Architecture picture"
           style="filter: brightness(0.5)"
+          loading="lazy"
         />
       </div>
       <div class="w-layout-blockcontainer container _100-height w-container">
@@ -352,110 +367,10 @@
         </div>
       </div>
     </section>
-    <section class="section logos radius">
-      <div class="w-layout-blockcontainer container w-container">
-        <div class="w-layout-grid grid">
-          <div
-            id="w-node-_12d80771-28fd-ca37-8511-d3198a9b6c4e-8a9b6c4b"
-            data-w-id="12d80771-28fd-ca37-8511-d3198a9b6c4e"
-            class="logo-slider"
-          >
-            <div class="gradient-logo-slider"></div>
-            <div class="gradient-logo-slider right"></div>
-            <div class="logo-slider-inside">
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc62d6da91e50a0ffa_d57c7c4f3e0c80d23bdfdedbea12def1_Example%20Logo%203.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dca684ec6c4fd24cc5_27c8fe8db4c46993762a787e784976a4_Example%20Logo%202.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc8f16779a336b4363_71ecf8436f5008b08b494d1a47674b52_Example%20Logo%201.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc62d6da91e50a0ffa_d57c7c4f3e0c80d23bdfdedbea12def1_Example%20Logo%203.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dca684ec6c4fd24cc5_27c8fe8db4c46993762a787e784976a4_Example%20Logo%202.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc8f16779a336b4363_71ecf8436f5008b08b494d1a47674b52_Example%20Logo%201.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-            </div>
-            <div class="logo-slider-inside">
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc62d6da91e50a0ffa_d57c7c4f3e0c80d23bdfdedbea12def1_Example%20Logo%203.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dca684ec6c4fd24cc5_27c8fe8db4c46993762a787e784976a4_Example%20Logo%202.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc8f16779a336b4363_71ecf8436f5008b08b494d1a47674b52_Example%20Logo%201.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc62d6da91e50a0ffa_d57c7c4f3e0c80d23bdfdedbea12def1_Example%20Logo%203.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dca684ec6c4fd24cc5_27c8fe8db4c46993762a787e784976a4_Example%20Logo%202.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-              <div class="line-up"></div>
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684776dc8f16779a336b4363_71ecf8436f5008b08b494d1a47674b52_Example%20Logo%201.svg"
-                loading="lazy"
-                alt="Example Logo"
-                class="logo"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="line"></div>
-    <section class="section _9-75rem-padding">
+    <section
+      class="section _9-75rem-padding"
+      style="border-radius: 20px 20px 0 0"
+    >
       <div class="wrap">
         <div class="background-lines">
           <div class="vertical-line"></div>
@@ -665,75 +580,80 @@
             id="w-node-_6d77f653-40d4-ae2f-fc32-811bb50eeda0-0155f17c"
             data-w-id="6d77f653-40d4-ae2f-fc32-811bb50eeda0"
             style="opacity: 0"
-            class="w-dyn-list"
           >
-            <div role="list" class="services-ver-a-collection-list w-dyn-items">
-              <div role="listitem" class="w-dyn-item">
-                <a
-                  href="/services/architectural-design"
-                  class="services-ver-a-link w-inline-block"
-                >
-                  <div class="services-ver-a-wrapper left">
-                    <img
-                      src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/685e5a3f8d3aa6ea20914e89_cc52941997dd913a3573a1797c872644_Service.svg"
-                      loading="lazy"
-                      alt="Services Icon"
-                      class="icon-32px"
+            <div
+              role="list"
+              class="services-ver-a-collection-list w-dyn-items responsive-grid-container"
+            >
+              <a
+                href="/services/architectural-design"
+                class="services-ver-a-link w-inline-block"
+              >
+                <div class="services-ver-a-wrapper left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="70"
+                    height="70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="margin-bottom: 0"
+                  >
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                    <path d="M15 18a3 3 0 1 0-6 0" />
+                    <path
+                      d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"
                     />
-                    <div
-                      class="paragraph-and-button _0-75-rem-gap"
-                      style="margin-bottom: 50px"
-                    >
-                      <h5>1. Apply as a Candidate</h5>
-                      <p class="gray max-320px">
-                        Fill out a short profile with your background, financial
-                        capacity, and preferences — location, company size,
-                        desired role.
-                      </p>
-                    </div>
+                    <circle cx="12" cy="13" r="2" />
+                  </svg>
+                  <div
+                    class="paragraph-and-button _0-75-rem-gap"
+                    style="margin-bottom: 50px"
+                  >
+                    <h5>1. Apply as a Candidate</h5>
+                    <p class="gray">
+                      Fill out a short profile with your background, financial
+                      capacity, and preferences — location, company size,
+                      desired role.
+                    </p>
                   </div>
-                  <div class="services-ver-a-wrapper image">
-                    <img
-                      src="https://cdn.prod.website-files.com/684858575703124f9a741805/6883fa3ebc659e0c35d03072_4-Brown.avif"
-                      loading="lazy"
-                      alt=""
-                      class="clickable-image"
-                    />
-                  </div>
-                </a>
-              </div>
+                </div>
+              </a>
               <div role="listitem" class="w-dyn-item">
                 <a
                   href="/services/interior-architecture"
                   class="services-ver-a-link w-inline-block"
                 >
                   <div class="services-ver-a-wrapper left">
-                    <img
-                      src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/685e5a3f8d3aa6ea20914e89_cc52941997dd913a3573a1797c872644_Service.svg"
-                      loading="lazy"
-                      alt="Services Icon"
-                      class="icon-32px"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m21 21-4.34-4.34" />
+                      <circle cx="11" cy="11" r="8" />
+                    </svg>
                     <div
                       class="paragraph-and-button _0-75-rem-gap"
                       style="margin-bottom: 50px"
                     >
                       <h5>2. We Find the Right Business for You</h5>
-                      <p class="gray max-320px">
+                      <p class="gray">
                         Our analysts and AI system match you with HVAC companies
                         actively looking for operational partners, not just
                         buyers.
                       </p>
                     </div>
                   </div>
-                  <div class="services-ver-a-wrapper image">
-                    <img
-                      src="https://cdn.prod.website-files.com/684858575703124f9a741805/6883fa4f511a231f9fde9276_5-Brown.avif"
-                      loading="lazy"
-                      alt=""
-                      class="clickable-image"
-                    />
-                  </div>
                 </a>
               </div>
               <div role="listitem" class="w-dyn-item">
@@ -742,30 +662,34 @@
                   class="services-ver-a-link w-inline-block"
                 >
                   <div class="services-ver-a-wrapper left">
-                    <img
-                      src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/685e5a3f8d3aa6ea20914e89_cc52941997dd913a3573a1797c872644_Service.svg"
-                      loading="lazy"
-                      alt="Services Icon"
-                      class="icon-32px"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                      <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                      <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                      <path
+                        d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
+                      />
+                    </svg>
                     <div
                       class="paragraph-and-button _0-75-rem-gap"
                       style="margin-bottom: 50px"
                     >
                       <h5>3. Access Exclusive Off-Market Deals</h5>
-                      <p class="gray max-320px">
+                      <p class="gray">
                         We’ll connect you with vetted, profitable businesses
                         that aren’t publicly listed anywhere.
                       </p>
                     </div>
-                  </div>
-                  <div class="services-ver-a-wrapper image">
-                    <img
-                      src="https://cdn.prod.website-files.com/684858575703124f9a741805/6883fa2c263223dbcedd0e3a_3-Brown.avif"
-                      loading="lazy"
-                      alt=""
-                      class="clickable-image"
-                    />
                   </div>
                 </a>
               </div>
@@ -775,18 +699,31 @@
                   class="services-ver-a-link w-inline-block"
                 >
                   <div class="services-ver-a-wrapper left">
-                    <img
-                      src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/685e5a3f8d3aa6ea20914e89_cc52941997dd913a3573a1797c872644_Service.svg"
-                      loading="lazy"
-                      alt="Services Icon"
-                      class="icon-32px"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                      <path
+                        d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"
+                      />
+                      <path d="m21 3 1 11h-2" />
+                      <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+                      <path d="M3 4h8" />
+                    </svg>
                     <div
                       class="paragraph-and-button _0-75-rem-gap"
                       style="margin-bottom: 50px"
                     >
                       <h5>4. Partner Instead of Purchase</h5>
-                      <p class="gray max-320px">
+                      <p class="gray">
                         Join gradually — through equity participation, profit
                         share, or a convertible agreement. <br /><br />
                         <strong>No</strong> debt. <strong>No</strong> starting
@@ -795,14 +732,6 @@
                       </p>
                     </div>
                   </div>
-                  <div class="services-ver-a-wrapper image">
-                    <img
-                      src="https://cdn.prod.website-files.com/684858575703124f9a741805/6883fa2c263223dbcedd0e3a_3-Brown.avif"
-                      loading="lazy"
-                      alt=""
-                      class="clickable-image"
-                    />
-                  </div>
                 </a>
               </div>
             </div>
@@ -810,23 +739,26 @@
         </div>
       </div>
     </section>
-    <section class="section _9-75rem-padding overflow-hidden">
+    <section class="section _9-75rem-padding">
       <div class="w-layout-blockcontainer container w-container">
         <div class="w-layout-grid grid">
           <div
-            id="w-node-b961c09b-610f-f5a9-16bd-b1629c8ff8ee-a7081612"
-            data-w-id="b961c09b-610f-f5a9-16bd-b1629c8ff8ee"
+            id="w-node-_42e2f9aa-ab8d-9a55-9f0e-455b926e3925-0155f17c"
             class="heading-left-to-right _4-rem-bottom-margin"
           >
             <div class="heading-and-label left">
-              <div class="label">
+              <div
+                data-w-id="42e2f9aa-ab8d-9a55-9f0e-455b926e3927"
+                style="opacity: 0"
+                class="label"
+              >
                 <img
-                  src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/6877784d0494f6b8c3d97606_c466316e8cde42f517329ddb72295862_Speak%20Icon.svg"
+                  src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/685e5a3f8d3aa6ea20914e89_cc52941997dd913a3573a1797c872644_Service.svg"
                   loading="lazy"
-                  alt="Speak Icon"
+                  alt="Services Icon"
                   class="icon-20px"
                 />
-                <p>Our Values</p>
+                <p>Services Overview</p>
               </div>
               <h2 class="max-500px">
                 What <span class="italic">You Get</span>
@@ -834,115 +766,165 @@
             </div>
           </div>
           <div
-            data-delay="1000"
-            data-animation="slide"
-            class="slider w-slider"
-            data-autoplay="false"
-            data-easing="ease"
-            data-hide-arrows="false"
-            data-disable-swipe="true"
-            data-w-id="b961c09b-610f-f5a9-16bd-b1629c8ff8f9"
-            data-autoplay-limit="0"
-            data-nav-spacing="3"
-            data-duration="500"
-            data-infinite="false"
-            id="w-node-b961c09b-610f-f5a9-16bd-b1629c8ff8f9-a7081612"
+            id="w-node-_6d77f653-40d4-ae2f-fc32-811bb50eeda0-0155f17c"
+            data-w-id="6d77f653-40d4-ae2f-fc32-811bb50eeda0"
+            style="opacity: 0"
           >
-            <div class="mask w-slider-mask">
-              <div class="testimonial-slide w-slide">
-                <div class="testimonial-text-ver-b">
-                  <img
-                    src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/6877784d0494f6b8c3d97606_c466316e8cde42f517329ddb72295862_Speak%20Icon.svg"
-                    loading="lazy"
-                    alt="Speak Icon"
-                    class="icon-32px"
-                  />
-                  <div class="testimonial-text">
-                    <h4 class="max-320px">
-                      <span class="italic">Equity</span>
-                      In a Running Business
-                    </h4>
-                    <p class="gray max-670px">
-                      Ownership that grows in value over time
-                    </p>
+            <div
+              role="list"
+              class="services-ver-a-collection-list w-dyn-items responsive-grid-container"
+            >
+              <div role="listitem" class="w-dyn-item">
+                <a
+                  href="/services/architectural-design"
+                  class="services-ver-a-link w-inline-block"
+                  style="background: rgba(222, 126, 79, 0.7)"
+                >
+                  <div class="services-ver-a-wrapper left">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="rgba(0, 0, 0, 0.4)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                      <path d="m9 11 3 3L22 4" />
+                    </svg>
+                    <div
+                      class="paragraph-and-button _0-75-rem-gap"
+                      style="margin-bottom: 50px"
+                    >
+                      <div class="testimonial-text">
+                        <h4 class="max-320px">
+                          <span class="italic">Equity</span>
+                          In a Running Business
+                        </h4>
+                        <p class="gray max-670px">
+                          Ownership that grows in value over time
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
-              <div class="testimonial-slide w-slide">
-                <div class="testimonial-text-ver-b">
-                  <img
-                    src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/68777885fb5516d62f9f4a13_6ea16aa83e4e75ed8068f9d151c635ee_Emer%20Icon.svg"
-                    loading="lazy"
-                    alt="Alert icon"
-                    class="icon-32px"
-                  />
-                  <div class="testimonial-text">
-                    <h4 class="max-320px">
-                      <span class="italic">Immediate </span>
-                      Cash Flow
-                    </h4>
-                    <p class="gray max-670px">
-                      Existing clients and steady revenue
-                    </p>
+              <a
+                href="/services/interior-architecture"
+                class="services-ver-a-link w-inline-block"
+                style="background: rgba(229, 167, 153, 0.7)"
+              >
+                <div class="services-ver-a-wrapper left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="80"
+                    height="80"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="rgba(0, 0, 0, 0.4)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <div
+                    class="paragraph-and-button _0-75-rem-gap"
+                    style="margin-bottom: 50px"
+                  >
+                    <div class="testimonial-text">
+                      <h4 class="max-320px">
+                        <span class="italic">Immediate </span>
+                        Cash Flow
+                      </h4>
+                      <p class="gray max-670px">
+                        Existing clients and steady revenue
+                      </p>
+                    </div>
                   </div>
                 </div>
+              </a>
+              <div role="listitem" class="w-dyn-item">
+                <a
+                  href="/services/urban-planning"
+                  class="services-ver-a-link w-inline-block"
+                  style="background: rgba(194, 185, 216, 0.7)"
+                >
+                  <div class="services-ver-a-wrapper left">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="rgba(0, 0, 0, 0.4)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                      <path d="m9 11 3 3L22 4" />
+                    </svg>
+                    <div
+                      class="paragraph-and-button _0-75-rem-gap"
+                      style="margin-bottom: 50px"
+                    >
+                      <div class="testimonial-text">
+                        <h4 class="max-320px">
+                          Freedom to Implement
+                          <span class="italic">Your Ideas</span>
+                        </h4>
+                        <p class="gray max-670px">
+                          Tech, CRM, marketing, operations
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="testimonial-slide w-slide">
-                <div class="testimonial-text-ver-b">
-                  <img
-                    src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/6855f44736c398eefb5d728c_1abc08ea2ec2feee61304b762d38a75a_Article_Icon.svg"
-                    loading="lazy"
-                    alt="Slot Icon"
-                    class="icon-32px"
-                  />
-                  <div class="testimonial-text">
-                    <h4 class="max-320px">
-                      Freedom to Implement
-                      <span class="italic">Your Ideas</span>
-                    </h4>
-                    <p class="gray max-670px">
-                      Tech, CRM, marketing, operations
-                    </p>
+              <div role="listitem" class="w-dyn-item">
+                <a
+                  href="/services/urban-planning"
+                  class="services-ver-a-link w-inline-block"
+                  style="background: rgba(151, 157, 199, 0.7)"
+                >
+                  <div class="services-ver-a-wrapper left">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="rgba(0, 0, 0, 0.4)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                      <path d="m9 11 3 3L22 4" />
+                    </svg>
+                    <div
+                      class="paragraph-and-button _0-75-rem-gap"
+                      style="margin-bottom: 50px"
+                    >
+                      <div class="testimonial-text">
+                        <h4 class="max-320px">
+                          Full Legal and Analytical
+                          <span class="italic">Support</span>
+                        </h4>
+                        <p class="gray max-670px">
+                          Every deal is verified and secure
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="testimonial-slide w-slide">
-                <div class="testimonial-text-ver-b">
-                  <img
-                    src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/68777885fb5516d62f9f4a13_6ea16aa83e4e75ed8068f9d151c635ee_Emer%20Icon.svg"
-                    loading="lazy"
-                    alt="Alert icon"
-                    class="icon-32px"
-                  />
-                  <div class="testimonial-text">
-                    <h4 class="max-320px">
-                      Full Legal and Analytical
-                      <span class="italic">Support</span>
-                    </h4>
-                    <p class="gray max-670px">
-                      Every deal is verified and secure
-                    </p>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
-            <div class="arrow w-slider-arrow-left">
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684b1f3b238efb621374c230_096ea8c2d2d93a29b42a6708b65df8fe_Arrow_Left.svg"
-                loading="lazy"
-                alt="Arrow Left"
-                class="icon-24px _60-opacity"
-              />
-            </div>
-            <div class="arrow right w-slider-arrow-right">
-              <img
-                src="https://cdn.prod.website-files.com/68473d24060dc01d9ede8c03/684b1f3948cea2064a85e599_d97ff5e883b625fea26f0943366a08be_Arrow_Right.svg"
-                loading="lazy"
-                alt="Arrow Right"
-                class="icon-24px"
-              />
-            </div>
-            <div class="slide-nav w-slider-nav w-round w-num"></div>
           </div>
         </div>
       </div>
@@ -970,8 +952,15 @@
               </div>
               <h2 class="max-500px">Who It’s For</h2>
             </div>
-            <div class="paragraph-and-button">
-              <ul class="gray" style="transform: translateX(-20px)">
+            <div class="paragraph-and-button" style="width: 100%">
+              <ul
+                class="gray"
+                style="
+                  transform: translateX(-20px);
+                  font-size: 20px;
+                  line-height: 28px;
+                "
+              >
                 <li>
                   <p>Operations Managers, Service Directors, Sales Leaders</p>
                 </li>
@@ -992,7 +981,7 @@
             data-w-id="f7233545-9de3-f508-a653-f39ff6b1da5a"
             class="image-wrapper _570px-height"
           >
-            <img src="./assets/1.jpeg" alt="" />
+            <img src="./assets/1.png" alt="" loading="lazy" />
           </div>
         </div>
       </div>
@@ -1326,7 +1315,7 @@
               data-wf-ignore="true"
               class="background-video w-background-video w-background-video-atom"
             >
-              <img src="./assets/3.jpeg" alt="" />
+              <img src="./assets/3.png" alt="" loading="lazy" />
             </div>
           </div>
         </div>
@@ -1343,7 +1332,8 @@
           >
             <img
               id="cta-image"
-              src="./assets/4.jpeg"
+              src="./assets/4.png"
+              loading="lazy"
               alt=""
               style="filter: brightness(0.5)"
             />
